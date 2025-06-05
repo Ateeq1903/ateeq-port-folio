@@ -1,6 +1,6 @@
 
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Text3D, Center, Float } from '@react-three/drei';
+import { OrbitControls, Center, Float } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import { Suspense } from 'react';
 import * as THREE from 'three';
@@ -36,6 +36,25 @@ const ParticleField = () => {
   return <>{particles}</>;
 };
 
+const CentralSphere = () => {
+  return (
+    <Center>
+      <Float speed={1} rotationIntensity={0.5} floatIntensity={1}>
+        <mesh>
+          <sphereGeometry args={[1.5, 32, 32]} />
+          <meshStandardMaterial
+            color="#00FFFF"
+            transparent
+            opacity={0.7}
+            emissive="#001122"
+            wireframe
+          />
+        </mesh>
+      </Float>
+    </Center>
+  );
+};
+
 const Scene3D = () => {
   return (
     <Canvas camera={{ position: [0, 0, 8], fov: 75 }}>
@@ -44,29 +63,7 @@ const Scene3D = () => {
       <pointLight position={[-10, -10, -10]} intensity={0.5} color="#FF00FF" />
       
       <Suspense fallback={null}>
-        <Center>
-          <Float speed={1} rotationIntensity={0.5} floatIntensity={1}>
-            <Text3D
-              font="/fonts/helvetiker_regular.typeface.json"
-              size={1.2}
-              height={0.2}
-              curveSegments={12}
-              bevelEnabled
-              bevelThickness={0.02}
-              bevelSize={0.02}
-              bevelOffset={0}
-              bevelSegments={5}
-            >
-              ATEEQ
-              <meshStandardMaterial
-                color="#00FFFF"
-                transparent
-                opacity={0.9}
-                emissive="#001122"
-              />
-            </Text3D>
-          </Float>
-        </Center>
+        <CentralSphere />
         
         <FloatingCube position={[-3, 2, -1]} color="#FF00FF" />
         <FloatingCube position={[3, -1, 1]} color="#00FFFF" />
