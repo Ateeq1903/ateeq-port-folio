@@ -186,27 +186,6 @@ const ContactSection = () => {
           </motion.div>
         </div>
       </motion.div>
-
-      {/* Footer */}
-      <motion.footer
-        className="mt-20 pt-10 border-t border-white/10"
-        initial={{ opacity: 0 }}
-        animate={inView ? { opacity: 1 } : {}}
-        transition={{ duration: 0.8, delay: 1 }}
-      >
-        <div className="text-center">
-          <p className="text-gray-400">
-            © 2024 Mohammed Ateeq. Crafted with 💜 and cutting-edge technology.
-          </p>
-          <motion.p
-            className="text-sm text-gray-500 mt-2"
-            animate={{ opacity: [0.5, 1, 0.5] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            Building the future, one line of code at a time.
-          </motion.p>
-        </div>
-      </motion.footer>
     </section>
   );
 };

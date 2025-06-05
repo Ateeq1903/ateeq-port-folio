@@ -1,73 +1,156 @@
-# Welcome to your Lovable project
 
-## Project info
+# Mohammed Ateeq - Interactive Portfolio
 
-**URL**: https://lovable.dev/projects/4e70272b-09cf-4698-8dcf-7bc779c9a9dc
+A cutting-edge, interactive portfolio website showcasing modern web development skills through immersive 3D elements, advanced animations, and creative visual effects. This project demonstrates expertise in AI engineering and full-stack development with a focus on innovative user experiences.
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+- **3D Interactive Elements**: Dynamic WebGL canvas with floating geometries and particle systems
+- **Advanced Animations**: Smooth scroll effects, micro-interactions, and page transitions
+- **Custom Cursor**: Magnetic cursor with trail effects for enhanced interactivity
+- **Responsive Design**: Optimized for all devices with mobile-first approach
+- **Loading Experience**: Animated loading screen with progress indicators
+- **Contact Form**: Functional contact form with real-time validation
 
-**Use Lovable**
+## 🛠️ Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4e70272b-09cf-4698-8dcf-7bc779c9a9dc) and start prompting.
+### Frontend Framework
+- **React 18** - Modern UI library with hooks
+- **TypeScript** - Type-safe development
+- **Vite** - Fast build tool and development server
 
-Changes made via Lovable will be committed automatically to this repo.
+### Styling & UI
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - Modern component library
+- **Framer Motion** - Advanced animation library
 
-**Use your preferred IDE**
+### 3D Graphics & Visualization
+- **Three.js** - 3D graphics library
+- **@react-three/fiber** - React renderer for Three.js
+- **@react-three/drei** - Useful helpers for react-three-fiber
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### State Management & Utilities
+- **React Query** - Data fetching and caching
+- **React Hook Form** - Form handling
+- **React Router** - Client-side routing
+- **React Intersection Observer** - Scroll-based animations
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📁 Project Structure
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── components/           # Reusable UI components
+│   ├── ui/              # shadcn/ui components
+│   ├── AboutSection.tsx # About section with skills
+│   ├── ContactSection.tsx # Contact form and info
+│   ├── CustomCursor.tsx # Animated cursor component
+│   ├── HeroSection.tsx  # Landing section with 3D elements
+│   ├── LoadingScreen.tsx # Initial loading animation
+│   ├── Navigation.tsx   # Main navigation bar
+│   ├── ProjectsSection.tsx # Portfolio projects showcase
+│   └── SkillsSection.tsx # Technical skills display
+├── pages/               # Page components
+│   ├── Index.tsx        # Main portfolio page
+│   └── NotFound.tsx     # 404 error page
+├── hooks/               # Custom React hooks
+├── lib/                 # Utility functions
+├── App.tsx              # Root application component
+└── main.tsx             # Application entry point
 ```
 
-**Edit a file directly in GitHub**
+## 🚀 Getting Started
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Prerequisites
 
-**Use GitHub Codespaces**
+- Node.js (v16 or higher)
+- npm or yarn package manager
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Installation
 
-## What technologies are used for this project?
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd portfolio-website
+   ```
 
-This project is built with:
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
-## How can I deploy this project?
+4. **Open your browser**
+   Navigate to `http://localhost:5173` to view the application
 
-Simply open [Lovable](https://lovable.dev/projects/4e70272b-09cf-4698-8dcf-7bc779c9a9dc) and click on Share -> Publish.
+### Available Scripts
 
-## Can I connect a custom domain to my Lovable project?
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint for code quality
 
-Yes, you can!
+## 🎨 Design Features
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Visual Effects
+- Gradient text animations
+- Glassmorphism UI elements
+- Particle systems and floating objects
+- Smooth scroll with parallax effects
+- Dynamic lighting in 3D scenes
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Interactive Elements
+- Hover animations on all clickable elements
+- Custom cursor that responds to interactive elements
+- Form validation with real-time feedback
+- Smooth section transitions
+
+### Performance Optimizations
+- Code splitting with React.lazy
+- Optimized 3D rendering with LOD
+- Compressed assets and images
+- Minimal bundle size with tree shaking
+
+## 📱 Browser Support
+
+- Chrome (recommended)
+- Firefox
+- Safari
+- Edge
+
+## 🔧 Customization
+
+### Modifying Content
+- Update personal information in component files
+- Replace project data in `ProjectsSection.tsx`
+- Modify skills in `SkillsSection.tsx`
+- Update contact information in `ContactSection.tsx`
+
+### Styling Changes
+- Modify Tailwind classes for quick styling updates
+- Update theme colors in `tailwind.config.ts`
+- Customize animations in component files
+
+### 3D Elements
+- Modify geometries and materials in `HeroSection.tsx`
+- Adjust lighting and camera positions
+- Add new 3D objects or animations
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+
+## 📞 Contact
+
+Mohammed Ateeq - AI Engineer & Full-Stack Developer
+
+- Email: mohammed.ateeq@example.com
+- LinkedIn: [Your LinkedIn Profile]
+- GitHub: [Your GitHub Profile]
