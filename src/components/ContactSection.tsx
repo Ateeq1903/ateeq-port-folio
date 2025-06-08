@@ -274,15 +274,6 @@ const ContactSection = () => {
                     type: "spring",
                     stiffness: 200
                   }}
-                  animate={{
-                    y: [0, -5, 0],
-                    rotate: [0, 5, -5, 0]
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    delay: index * 0.3
-                  }}
                 >
                   <motion.span
                     animate={{
@@ -311,7 +302,7 @@ const ContactSection = () => {
                   />
                 </motion.button>
               ))}
-            </div>
+            </motion.div>
           </motion.div>
 
           {/* Enhanced Contact Form */}
