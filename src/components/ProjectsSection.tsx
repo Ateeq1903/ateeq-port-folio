@@ -1,4 +1,3 @@
-
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState, useRef } from 'react';
@@ -389,7 +388,6 @@ const ProjectsSection = () => {
             className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full mt-6"
             initial={{ width: 0, opacity: 0, scale: 0 }}
             whileInView={{ width: 96, opacity: 1, scale: 1 }}
-            transition={{ duration: 1.5, delay: 0.6 }}
             animate={{
               boxShadow: [
                 "0 0 20px rgba(6, 182, 212, 0.5)",
@@ -398,8 +396,10 @@ const ProjectsSection = () => {
               ]
             }}
             transition={{
-              duration: 3,
-              repeat: Infinity
+              width: { duration: 1.5, delay: 0.6 },
+              opacity: { duration: 1.5, delay: 0.6 },
+              scale: { duration: 1.5, delay: 0.6 },
+              boxShadow: { duration: 3, repeat: Infinity }
             }}
           />
         </motion.div>

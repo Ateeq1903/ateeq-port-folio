@@ -211,15 +211,17 @@ const AboutSection = () => {
               {/* Animated Rings with advanced scroll effects */}
               <motion.div
                 className="absolute inset-0 border-2 border-cyan-500/30 rounded-full"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                animate={{ 
+                  rotate: 360,
+                  borderColor: ["rgba(6, 182, 212, 0.3)", "rgba(6, 182, 212, 0.8)", "rgba(6, 182, 212, 0.3)"]
+                }}
+                transition={{ 
+                  rotate: { duration: 20, repeat: Infinity, ease: "linear" },
+                  borderColor: { duration: 2, repeat: Infinity }
+                }}
                 style={{
                   scale: useTransform(scrollYProgress, [0.2, 0.8], [0.8, 1.2])
                 }}
-                whileInView={{
-                  borderColor: ["rgba(6, 182, 212, 0.3)", "rgba(6, 182, 212, 0.8)", "rgba(6, 182, 212, 0.3)"]
-                }}
-                transition={{ duration: 2, repeat: Infinity }}
               />
               <motion.div
                 className="absolute inset-4 border-2 border-purple-500/30 rounded-full"
@@ -308,7 +310,7 @@ const AboutSection = () => {
                   }}
                   initial={{ scale: 0, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.8 + (index * 0.1) }}
+                  viewport={{ once: true }}
                 >
                   <motion.span
                     animate={{ rotate: [0, -360] }}

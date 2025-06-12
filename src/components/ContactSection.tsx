@@ -1,4 +1,3 @@
-
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState, useRef } from 'react';
@@ -98,7 +97,6 @@ const ContactSection = () => {
             className="w-24 h-1 bg-gradient-to-r from-pink-500 to-cyan-500 mx-auto rounded-full mt-6"
             initial={{ width: 0, opacity: 0, rotateZ: 180 }}
             whileInView={{ width: 96, opacity: 1, rotateZ: 0 }}
-            transition={{ duration: 1.5, delay: 0.7 }}
             animate={{
               boxShadow: [
                 "0 0 20px rgba(236, 72, 153, 0.5)",
@@ -107,8 +105,10 @@ const ContactSection = () => {
               ]
             }}
             transition={{
-              duration: 3,
-              repeat: Infinity
+              width: { duration: 1.5, delay: 0.7 },
+              opacity: { duration: 1.5, delay: 0.7 },
+              rotateZ: { duration: 1.5, delay: 0.7 },
+              boxShadow: { duration: 3, repeat: Infinity }
             }}
           />
         </motion.div>
@@ -134,7 +134,6 @@ const ContactSection = () => {
                 className="text-3xl font-bold text-white mb-8"
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
                 animate={{
                   textShadow: [
                     "0 0 20px rgba(255, 255, 255, 0.5)",
@@ -143,8 +142,9 @@ const ContactSection = () => {
                   ]
                 }}
                 transition={{
-                  duration: 3,
-                  repeat: Infinity
+                  opacity: { duration: 0.8, delay: 0.2 },
+                  scale: { duration: 0.8, delay: 0.2 },
+                  textShadow: { duration: 3, repeat: Infinity }
                 }}
               >
                 Get In Touch
